@@ -44,19 +44,19 @@ def clean_nav_history():
     nav_history = pd.read_csv("data/raw/02_nav_history.csv")
     inspect_dataset(nav_history)
 
-    nav_history = parse_date(nav_history, "date")
+    # nav_history = parse_date(nav_history, "date")
 
-    nav_history = nav_history.sort_values(["amfi_code", "date"])
-    print("Data sorted according to AMFI codes and Date successfully!")
+    # nav_history = nav_history.sort_values(["amfi_code", "date"])
+    # print("Data sorted according to AMFI codes and Date successfully!")
 
-    invalid_nav = nav_history[nav_history["nav"] <= 0]
+    # invalid_nav = nav_history[nav_history["nav"] <= 0]
 
-    if len(invalid_nav) == 0:
-        print("All NAV values are greater than 0")
-    else:
-        print("Invalid NAV records found:\n", invalid_nav)
+    # if len(invalid_nav) == 0:
+    #     print("All NAV values are greater than 0")
+    # else:
+    #     print("Invalid NAV records found:\n", invalid_nav)
 
-    save_processed(nav_history, "nav_history_cleaned.csv")
+    # save_processed(nav_history, "nav_history_cleaned.csv")
 
 
 def clean_investor_transactions():
@@ -152,10 +152,10 @@ def clean_benchmark_indices():
     save_processed(benchmark_indices, "benchmark_indices_cleaned.csv")
 
 if __name__ == "__main__":
-    # clean_nav_history()
+    clean_nav_history()
     # clean_investor_transactions()
     # clean_scheme_performance()
-    clean_fund_master()
+    # clean_fund_master()
     # clean_aum_by_fund_house()
     # clean_monthly_sip_inflows()
     # clean_category_inflows()

@@ -1,2 +1,7 @@
 data/raw/ 
 data/processed/ 
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Plotly temporary files
+iframe_figures/
