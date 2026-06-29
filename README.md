@@ -51,29 +51,56 @@ Mutual_Fund_Analysis/
 - Validated AMFI codes between `fund_master` and `nav_history`.
 - Performed initial data quality assessment and documented observations.
 
-### Day 2 – ETL Pipeline & Data Cleaning
+### Day 2 – ETL Pipeline, SQLite Data Warehouse & SQL Analytics
 
-- Developed a reusable ETL pipeline for dataset preprocessing.
-- Implemented reusable helper functions for:
-  - Dataset inspection
-  - Date parsing and validation
-  - Processed file generation
-- Cleaned and validated all project datasets.
-- Standardized date formats across datasets.
-- Validated NAV values, transaction amounts, numeric return fields, and expense ratios.
-- Performed missing value, duplicate record, and categorical value inspection.
-- Generated cleaned datasets in the `data/processed` directory for downstream analysis.
+* Developed a reusable ETL pipeline for dataset preprocessing.
+* Implemented reusable helper functions for:
+
+  * Dataset inspection
+  * Date parsing and validation
+  * Processed file generation
+* Cleaned and validated all project datasets.
+* Standardized date formats across datasets.
+* Validated NAV values, transaction amounts, numeric return fields, and expense ratios.
+* Performed missing value, duplicate record, and categorical value inspection.
+* Generated cleaned datasets in the `data/processed` directory for downstream analysis.
+* Designed and implemented a SQLite star schema.
+* Created dimension tables:
+
+  * `dim_fund`
+  * `dim_date`
+* Created fact tables:
+
+  * `fact_nav`
+  * `fact_aum`
+  * `fact_performance`
+  * `fact_transactions`
+* Loaded cleaned datasets into SQLite using SQLAlchemy.
+* Added supporting analytical tables:
+
+  * `monthly_sip_inflows`
+  * `category_inflows`
+  * `industry_folio_count`
+  * `portfolio_holdings`
+  * `benchmark_indices`
+* Implemented row count verification after loading each table.
+* Wrote and tested 10 analytical SQL queries.
+* Created a comprehensive data dictionary documenting tables, columns, data types, business definitions, and data sources.
+
 
 ## Current Status
 
-- ✅ Project setup completed
-- ✅ Dataset exploration completed
-- ✅ AMFI code validation completed
-- ✅ Live NAV extraction implemented
-- ✅ ETL pipeline implemented
-- ✅ Data cleaning completed
-- 🔄 SQLite database design in progress
-- 🔄 SQL analytical queries in progress
+* ✅ Project setup completed
+* ✅ Dataset exploration completed
+* ✅ AMFI code validation completed
+* ✅ Live NAV extraction implemented
+* ✅ ETL pipeline implemented
+* ✅ Data cleaning completed
+* ✅ SQLite data warehouse completed
+* ✅ SQL analytical queries completed
+* ✅ Data dictionary completed
+* 🔄 Exploratory Data Analysis (EDA) in progress
+
 
 ## Author
 
