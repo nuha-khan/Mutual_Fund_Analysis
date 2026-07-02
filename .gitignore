@@ -5,3 +5,4 @@ data/processed/
 
 # Plotly temporary files
 iframe_figures/
+sql/bluestock_mf.db

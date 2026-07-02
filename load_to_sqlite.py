@@ -153,5 +153,8 @@ benchmark = load_csv("data/processed/benchmark_indices_cleaned.csv", "date")
 # portfolio.to_sql("portfolio_holdings",con=engine,if_exists="replace",index=False)
 # verify_row_count(portfolio,"portfolio_holdings")
 
-benchmark.to_sql("benchmark_indices",con=engine,if_exists="replace",index=False)
-verify_row_count(benchmark,"benchmark_indices")
+# benchmark.to_sql("benchmark_indices",con=engine,if_exists="replace",index=False)
+# verify_row_count(benchmark,"benchmark_indices")
+
+sip = pd.read_sql("SELECT * FROM fact_sip_industry", engine)
+sip.to_csv("data/processed/fact_sip_industry.csv", index=False)
