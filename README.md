@@ -20,32 +20,39 @@ Mutual_Fund_Analysis/
 │   └── processed/
 │
 ├── notebooks/
+│   ├── Advanced_Analytics.ipynb
+│   ├── EDA_Analysis.ipynb
+│   ├── Performance_Analytics.ipynb
+│   ├── data_ingestion.py
+│   └── etl_pipeline.py
+│
 ├── sql/
 ├── dashboard/
 ├── reports/
-│   └── charts/
+│  
 │
-├── data_ingestion.py
-├── live_nav_fetch.py
-├── etl_pipeline.py
+├── scripts/
+│   ├── live_nav_fetch.py
+│   └── load_to_sqlite.py
 ├── requirements.txt
 └── README.md
 ```
 
 ## Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Plotly
-* SQLite
-* SQLAlchemy
-* Requests
-* Jupyter Notebook
-* Git
-* GitHub
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Plotly
+- SQLite
+- SQLAlchemy
+- Power BI
+- Requests
+- Jupyter Notebook
+- Git
+- GitHub
 
 ## Work Completed
 
@@ -127,19 +134,71 @@ Performed a comprehensive exploratory data analysis using SQL, Pandas, Matplotli
 * Aggregated equity sector allocations across portfolios.
 * Analyzed payment modes, KYC status, and transaction types.
 
+## Day 4 – Interactive Power BI Dashboard
+
+Developed a multi-page interactive Power BI dashboard to visualize key mutual fund industry metrics, fund performance, investor analytics, and SIP trends.
+
+### Dashboard Pages
+
+#### Page 1 – Industry Overview
+
+- KPI Cards for:
+  - Total Assets Under Management (AUM)
+  - Monthly SIP Inflows
+  - Total Folios
+  - Total Mutual Fund Schemes
+- Industry AUM Trend (2022–2025)
+- AUM by Fund House
+- Interactive slicers for Year and Fund House
+
+#### Page 2 – Fund Performance Analysis
+
+- Risk vs Return Scatter Plot
+- NAV vs Benchmark Trend Comparison
+- Top 10 Funds by Fund Score
+- Dynamic filtering by Category and Fund House
+
+#### Page 3 – NAV Detail Analysis
+
+- Drill-through page from Fund Performance
+- NAV Trend over Time
+- Fund Information Cards:
+  - Scheme Name
+  - Fund House
+  - Category
+  - Launch Date
+- Interactive navigation and tooltips
+
+#### Page 4 – SIP & Market Trends
+
+- Monthly SIP Inflow Trend
+- SIP Inflow vs Benchmark Index Comparison
+- Interactive Year slicer
+- Tooltips for all visuals
+
+### Dashboard Features
+
+- Built using Power BI Desktop
+- Connected to SQLite data warehouse
+- Interactive slicers
+- Drill-through navigation
+- Custom tooltips
+- Consistent Bluestock-themed dashboard design
+- Exported dashboard as `.pbix` and PDF
+
 ## Current Status
 
-* ✅ Project setup completed
-* ✅ Dataset exploration completed
-* ✅ AMFI code validation completed
-* ✅ Live NAV extraction implemented
-* ✅ ETL pipeline implemented
-* ✅ Data cleaning completed
-* ✅ SQLite data warehouse completed
-* ✅ SQL analytical queries completed
-* ✅ Data dictionary completed
-* ✅ Exploratory Data Analysis completed
-* 🔄 Dashboard development in progress
+- ✅ Project setup completed
+- ✅ Dataset exploration completed
+- ✅ Live NAV extraction implemented
+- ✅ ETL pipeline completed
+- ✅ Data cleaning & preprocessing completed
+- ✅ SQLite data warehouse implemented
+- ✅ SQL analytical queries completed
+- ✅ Data dictionary prepared
+- ✅ Exploratory Data Analysis completed
+- ✅ Interactive Power BI Dashboard completed
+- 🔄 Advanced Analytics (VaR, CVaR, Rolling Sharpe, Cohort Analysis, HHI, Recommender System) in progress
 
 ## Author
 
