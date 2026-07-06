@@ -6,3 +6,9 @@ data/processed/
 # Plotly temporary files
 iframe_figures/
 sql/bluestock_mf.db
+dashboard/bluestock_mf_dashboard.pdf
+reports/Page 1.png
+reports/Page 2.png
+reports/Page 3.png
+reports/Page 4.png
+reports/Page 5.png
