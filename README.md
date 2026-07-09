@@ -1,4 +1,4 @@
-# Mutual Fund Analysis Platform
+# Mutual Fund Analytics Platform
 
 A data analytics project focused on analyzing Indian mutual fund data through ETL pipelines, data validation, exploratory analysis, SQL-based analytics, and reporting.
 
@@ -186,6 +186,41 @@ Developed a multi-page interactive Power BI dashboard to visualize key mutual fu
 - Consistent Bluestock-themed dashboard design
 - Exported dashboard as `.pbix` and PDF
 
+## Day 5 – Advanced Performance Analytics
+
+Implemented advanced quantitative analytics commonly used in mutual fund performance evaluation.
+
+### Analytics Implemented
+
+1. Alpha & Beta Calculation (Linear Regression)
+2. Maximum Drawdown Analysis
+3. Fund Scorecard (0–100 Composite Ranking)
+4. Benchmark Comparison (Top 5 Funds vs NIFTY50 & NIFTY100)
+5. Tracking Error Calculation
+
+### Methodologies Used
+
+- Daily Return Computation
+- Linear Regression using `scipy.stats.linregress`
+- Annualized Alpha Estimation
+- Beta Calculation against Benchmark
+- Maximum Drawdown using Running Peak Method
+- Tracking Error:
+  - Standard Deviation of (Fund Return − Benchmark Return)
+  - Annualized using √252
+- Composite Fund Score based on:
+  - 30% → 3-Year CAGR Rank
+  - 25% → Sharpe Ratio Rank
+  - 20% → Alpha Rank
+  - 15% → Expense Ratio Rank (Inverse)
+  - 10% → Maximum Drawdown Rank (Inverse)
+
+### Outputs Generated
+
+- `alpha_beta.csv`
+- `fund_scorecard.csv`
+- Benchmark Comparison Visualization
+
 ## Current Status
 
 - ✅ Project setup completed
@@ -198,7 +233,7 @@ Developed a multi-page interactive Power BI dashboard to visualize key mutual fu
 - ✅ Data dictionary prepared
 - ✅ Exploratory Data Analysis completed
 - ✅ Interactive Power BI Dashboard completed
-- 🔄 Advanced Analytics (VaR, CVaR, Rolling Sharpe, Cohort Analysis, HHI, Recommender System) in progress
+- ✅ Advanced Performance Analytics completed
 
 ## Author
 
