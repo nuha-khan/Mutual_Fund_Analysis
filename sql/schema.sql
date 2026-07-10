@@ -91,3 +91,53 @@ CREATE TABLE IF NOT EXISTS fact_transactions (
     FOREIGN KEY (date_id) REFERENCES dim_date(date_id),
     FOREIGN KEY (amfi_code) REFERENCES dim_fund(amfi_code)
 );
+
+CREATE TABLE fact_performance (
+    performance_id INTEGER PRIMARY KEY,
+    amfi_code INTEGER NOT NULL,
+    return_1yr_pct REAL,
+    return_3yr_pct REAL,
+    return_5yr_pct REAL,
+    benchmark_3yr_pct REAL,
+    alpha REAL,
+    beta REAL,
+    sharpe_ratio REAL,
+    sortino_ratio REAL,
+    std_dev_ann_pct REAL,
+    max_drawdown_pct REAL,
+    aum_crore INTEGER,
+    expense_ratio_pct REAL,
+    morningstar_rating INTEGER,
+    risk_grade TEXT,
+    FOREIGN KEY (amfi_code) REFERENCES dim_fund(amfi_code)
+);
+
+CREATE TABLE fact_sip_industry (
+    month DATETIME,
+    sip_inflow_crore BIGINT,
+    active_sip_accounts_crore FLOAT,
+    new_sip_accounts_lakh FLOAT,
+    sip_aum_lakh_crore FLOAT,
+    yoy_growth_pct FLOAT
+);
+
+CREATE TABLE benchmark_indices (
+    date DATETIME,
+    index_name TEXT,
+    close_value FLOAT
+);
+
+CREATE TABLE category_inflows (
+    month DATETIME,
+    category TEXT,
+    net_inflow_crore FLOAT
+);
+
+CREATE TABLE industry_folio_count (
+    month DATETIME,
+    total_folios_crore FLOAT,
+    equity_folios_crore FLOAT,
+    debt_folios_crore FLOAT,
+    hybrid_folios_crore FLOAT,
+    others_folios_crore FLOAT
+);
