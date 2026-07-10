@@ -15,25 +15,39 @@ A data analytics project focused on analyzing Indian mutual fund data through ET
 ```text
 Mutual_Fund_Analysis/
 │
+├── dashboard/
+│   ├── bluestock_mf_dashboard.pbix
+│   └── bluestock_mf_dashboard.pdf
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
 │
 ├── notebooks/
-│   ├── Advanced_Analytics.ipynb
+│   ├── data_ingestion.ipynb
+│   ├── Data_Cleaning.ipynb
 │   ├── EDA_Analysis.ipynb
 │   ├── Performance_Analytics.ipynb
-│   ├── data_ingestion.py
-│   └── etl_pipeline.py
+│   ├── Advanced_Analytics.ipynb
+│   └── live_nav_fetch.ipynb
 │
-├── sql/
-├── dashboard/
 ├── reports/
-│  
+│   ├── charts/
+│   └── data_quality_summary.md
 │
 ├── scripts/
+│   ├── data_ingestion.py
+│   ├── etl_pipeline.py
 │   ├── live_nav_fetch.py
-│   └── load_to_sqlite.py
+│   ├── load_to_sqlite.py
+│   └── recommender.py
+│
+├── sql/
+│   ├── schema.sql
+│   └── queries.sql
+│
+├── .gitignore
+├── data_dictionary.md
 ├── requirements.txt
 └── README.md
 ```
